@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './_main-logo.svg';
+import './App.scss';
+
+import {AlertButton} from './AlertButton';
+import {Counter} from './Counter';
+import Header from './Main-Header'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            
+            <Header /> 
+            
+            <section className="Section-header">
+                {/*<Links links={menu} />*/}
+                <p>
+                    Welcome
+                </p>
+                <img src={logo} className="App-logo" alt="logo" />
+        
+                
+                
+                <div>
+                    <AlertButton />
+                    <Counter />
+                </div>   
+            </section>
+            
+            <body>
+                <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+            </body>
+        </div>
+
+    
+    );
 }
 
 export default App;
+
