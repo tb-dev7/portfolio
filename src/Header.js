@@ -1,7 +1,5 @@
 import React from 'react';
-import Nav from './Main-Nav'
-import Icons from './Main-Icon'
-import './App.scss';
+import Icons from './Icons'
 
 function Header() {
     return (
@@ -11,8 +9,7 @@ function Header() {
                 <link href="https://fonts.googleapis.com/css?family=Gruppo|Handlee|Montserrat+Subrayada&display=swap" rel="stylesheet" />
 
                 
-                <Icons />
-
+                
                 <div class="Section-group">
                     
                     <div class="Main-title">
@@ -22,11 +19,10 @@ function Header() {
                     <div class="Main-sub-title">
 	                    IT Specialist & Software Developer
 	                </div>
-                    
+                     
                 </div> 
-                
-                <div class="topbottom">
-                    <Nav />
+                <div>
+                    <Icons />
                 </div>
             </header>
                     

@@ -1,39 +1,20 @@
 import React from 'react';
-import logo from './_main-logo.svg';
+import Header from './Header';
+import Section from './Section';
+import Footer from './Footer';
+import FooterCard from './FooterCard';
 import './App.scss';
-
-import {AlertButton} from './AlertButton';
-import {Counter} from './Counter';
-import Header from './Main-Header'
-
 
 function App() {
     return (
-        <div className="App">
+        <>
+            <div className="App">
+                <Header /> 
+                <Section />
+            </div>
             
-            <Header /> 
-            
-            <section className="Section-header">
-                {/*<Links links={menu} />*/}
-                <p>
-                    Welcome
-                </p>
-                <img src={logo} className="App-logo" alt="logo" />
-        
-                
-                
-                <div>
-                    <AlertButton />
-                    <Counter />
-                </div>   
-            </section>
-            
-            <body>
-                <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-            </body>
-        </div>
-
-    
+            <Footer />
+        </>
     );
 }
 
