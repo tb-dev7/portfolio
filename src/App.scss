@@ -1,0 +1,406 @@
+/* ===== COLORS =====  */
+
+$navbar-background: rgb(255, 255, 255);
+$dark-grey: #3c4245;
+$slate-grey: #5f6769;
+$turquoise: #719192;
+$beige: #dfcdc3;
+$text-strong:	hsl(0, 0%, 21%);
+$background: hsl(0, 0%, 96%);
+$border:#5f6769;
+
+
+/* ===== Bulma's global variables =====  */
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $dark-grey;
+$grey-light: $slate-grey;
+$primary: $navbar-background;
+$link: $background;
+$link-visited: $beige;
+$link-hover: $dark-grey;
+$widescreen-enabled: true;
+$fullhd-enabled: true;
+$radius-large: 6px;
+$size-4: 1.5rem;
+$success-invert: $beige;
+/* ===== Bulma's component variables =====  */
+//$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+$card-color: $beige;
+$card-background-color: $dark-grey;
+
+$card-header-background-color: transparent;
+$card-header-color: blue;
+$card-header-padding: 0.75rem 1rem;
+$card-header-shadow: 0 0.125em 0.25em;
+
+
+$card-content-background-color: transparent;
+$card-content-padding: 1.5rem;
+
+$card-footer-background-color: transparent;
+$card-footer-border-top: 1px solid;
+$card-footer-padding: 0.75rem;
+$card-media-margin: 1.5rem;
+
+$modal-z: 40;
+
+$modal-background-background-color: black;
+
+$modal-content-width: 640px;
+$modal-content-margin-mobile: 20px;
+$modal-content-spacing-mobile: 160px;
+$modal-content-spacing-tablet: 40px;
+
+$modal-close-dimensions: 40px;
+$modal-close-right: 20px;
+$modal-close-top: 20px;
+
+$modal-card-spacing: 40px;
+
+$modal-card-head-background-color: blue;
+$modal-card-head-border-bottom: 1px solid $border;
+$modal-card-head-padding: 20px;
+$modal-card-head-radius: $radius-large;
+
+$modal-card-title-color: $text-strong;
+$modal-card-title-line-height: 1;
+$modal-card-title-size: $size-4;
+
+$modal-card-foot-radius: $radius-large;
+$modal-card-foot-border-top: 1px solid $border;
+
+$modal-card-body-background-color: black;
+$modal-card-body-padding: 20px;
+$background-image: url(_graphic-left.png);
+
+
+/* ===== IMPORTS =====  */
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+
+
+.img-footer{
+  //display: $background-image;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: white;
+  opacity: 0.5;
+  background-image: url(_graphic-left.png);
+  background-position: right bottom, left top;
+}
+
+/* ===== MAIN =====  */
+
+.topright {               //puts icons on the left of the menu
+  //position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 30px;
+  color: white;  
+}
+
+.topbottom{
+  position: bottom;
+}
+
+a:link {
+  color: $navbar-background;
+}
+
+a:visited {
+  color:$link-visited;
+}
+
+a:hover {
+  color: $dark-grey;
+}
+
+
+
+.App-header {
+  background: #F0F2F0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #0F2027, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #0F2027, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: 	rgb(255, 255, 255);
+  position: relative;
+}
+
+/* ===== SECTIONS =====  */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App {                        //centers name in block
+  text-align: center;
+}
+
+.App-logo {                     //react animation
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.main-title{
+  position: relative;
+}
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: px;
+}
+
+.Section-header {       //Welcome section
+  background: #00416A;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to top, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to top, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: 	#F0F8FF;
+}
+
+.Section-group{
+  position: bottom;
+}
+
+/* ===== INFO CARD ===== */
+
+
+.card{
+  background-color: $card-background-color;
+  box-shadow: $card-shadow;
+  color: $card-color;
+  max-width: 100%;
+  position: relative;
+}
+.card-header{
+  background-color: $card-header-background-color;
+  align-items: stretch;
+  box-shadow: $card-header-shadow;
+  display: flex;
+}
+.card-header-title{
+  align-items: center;
+  color: $card-header-color;
+  display: flex;
+  flex-grow: 1;
+  font-weight: $card-header-weight;
+  padding: $card-header-padding;
+  justify-content: center;
+}
+.card-header-icon{
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: $card-header-padding;
+}
+.card-image{
+  display: block;
+  position: relative;
+}
+.card-content{
+  background-color: $card-content-background-color;
+  padding: $card-content-padding;
+}
+.card-footer{
+  background-color: $card-footer-background-color;
+  border-top: $card-footer-border-top;
+  align-items: stretch;
+  display: flex;
+}
+.card-footer-item{
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: $card-footer-padding;
+  border-right: $card-footer-border-top;
+}
+.card-footer-image{
+  align-items: left;
+  display: inline-block;
+  justify-content: center;
+
+  //padding: $card-footer-padding;
+  //border-right: $card-footer-border-top;
+}
+
+/* ===== MODAL ===== */
+.modal{
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: $modal-z;
+  // Modifiers
+  display: flex;
+}
+.modal-background{
+  background-color: $modal-background-background-color;
+}
+
+.modal-card{
+  margin: 0 $modal-content-margin-mobile;
+  max-height: calc(100vh - #{$modal-content-spacing-mobile});
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+.modal-card{
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - #{$modal-card-spacing});
+  overflow: hidden;
+}
+.modal-card-head,
+.modal-card-foot{
+  align-items: center;
+  background-color: $modal-card-head-background-color;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: $modal-card-head-padding;
+  position: relative;
+}
+
+.modal-card-head{
+  border-bottom: $modal-card-head-border-bottom;
+  border-top-left-radius: $modal-card-head-radius;
+  border-top-right-radius: $modal-card-head-radius;
+}
+
+.modal-card-title{
+  color: $modal-card-title-color;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: $modal-card-title-size;
+  line-height: $modal-card-title-line-height;
+}
+
+.modal-card-foot{
+  border-bottom-left-radius: $modal-card-foot-radius;
+  border-bottom-right-radius: $modal-card-foot-radius;
+  border-top: $modal-card-foot-border-top;
+  margin-right: 0.5em;
+}
+.modal-card-body{
+  background-color: $modal-card-body-background-color;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+  padding: $modal-card-body-padding;
+}
+
+/* ===== FOOTER ===== */
+.Footer{
+//background: black;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to top, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to top, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: 	#F0F8FF;
+  display: inline;
+}
+
+.Footer-left{
+  float: left;
+  display: inline;
+  width: 550px;
+  //display: $image;
+  background-image: url(_graphic-left.png);
+  text-align: center;
+}
+
+.Footer-right{
+  float: right;
+  //display: 
+  //height: 250px;
+  width: 1353px;
+  display: inline;
+  background-image: url(_graphic-left.png);
+  text-align: center;
+}
+
+.FooterContent{
+  
+  font-size: calc(5px + 1vmin);
+  color: white;
+  background-color: $modal-card-body-background-color;
+  display: block;
+  
+  justify-content: center;
+}
+.Footer-container{
+  float: center;
+  display: inline-box;
+  //height: 250px;
+  //width: 550px;
+  //display: $image;
+  //background-image: url(_graphic-right.png);
+  text-align: center;
+  
+}
+/* ===== OLD CODE =====  */
+/*
+.App-link {
+  color: #ffffff;
+}
+
+
+
+.navbar {
+  background-color: $navbar-background;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color:  rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+.navbar a:hover {
+  background: darken($navbar-background, 10%); //rgb(86, 101, 119);
+  color: rgb(255, 255, 255);
+}
+
+.main {
+  margin-top: 30px;
+}
+*/
